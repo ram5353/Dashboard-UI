@@ -1,0 +1,35 @@
+<div>
+  <div class="fixed-top">
+    <div class="jumbotron jumbotron-fluid pt-4 pb-2 mb-0 header-align" style="background-color: #002d42 !important;">
+      <h3 class="title-align">Pied Pipers</h3>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light" style="background-color: #004666 !important;">
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand align-tabs" href="javascript:void(0)">
+          Menu
+        </a>  </button>
+      <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="nav navbar-nav" style="color: white !important;">
+          <li class="nav-item  active"><a class="nav-link align-tabs" href="#">Home</a></li>
+          <li class="nav-item "><a class="nav-link align-tabs" (click)="showCustomers()" href="javascript:void(0)">Graphs</a></li>
+          <li class="nav-item "><a class="nav-link align-tabs" href="javascript:void(0)">Questions</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto" style="color: white !important;">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand align-login-tab" href="#">
+              <i class="fa fa-address-book"></i>
+              Log Out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  <div class="card-header card-design">-->
+    <!--  </div>-->
+  </div>
+  <!--<div class="table-align">-->
+  <!--  <app-fiber-customers></app-fiber-customers>-->
+  <!--</div>-->
+</div>
