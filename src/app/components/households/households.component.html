@@ -1,0 +1,16 @@
+  <div class="table-align">
+  <table id="users">
+
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col}}
+      </th>
+    </tr>
+    <tr *ngFor="let household of households">
+      <td *ngFor="let col of index">
+        {{household[col]}}
+      </td>
+    </tr>
+
+  </table>
+  </div>

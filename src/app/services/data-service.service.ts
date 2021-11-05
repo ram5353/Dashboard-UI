@@ -14,4 +14,10 @@ export class DataServiceService {
   public getTotalSales(): Observable<any> {
     return this.http.get(this.ROOT_URL + '/transactions/totalsales');
   }
+
+  public getHouseholdsData(): Observable<any> {
+    return this.http.get(this.ROOT_URL + '/house-holds/getInfo');
+  }
+
+
 }
