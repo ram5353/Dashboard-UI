@@ -1,8 +1,8 @@
   <div class="table-align">
     <div class="wrap">
       <div class="search">
-        <input type="text" class="searchTerm" placeholder="Search for household number">
-        <button type="submit" class="searchButton">
+        <input type="text" class="searchTerm" [(ngModel)]="search" placeholder="Search for household number">
+        <button type="submit" (click)="searchHouseHold(search)" class="searchButton">
           <p class="fa fa-search">Search</p>
         </button>
       </div>
@@ -14,7 +14,7 @@
         {{col}}
       </th>
     </tr>
-    <tr *ngFor="let household of households">
+    <tr *ngFor="let household of filteredHouseHolds | householdFilter: search">
       <td *ngFor="let col of index">
         {{household[col]}}
       </td>

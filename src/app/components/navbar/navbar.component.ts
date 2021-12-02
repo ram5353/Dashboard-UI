@@ -19,8 +19,8 @@ export class NavbarComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
   }
 
-  showCustomers() {
-    return this.route.navigate(['/fiber-customers']);
+  showGraphs() {
+    return this.route.navigate(['/graphs']);
   }
 
 }

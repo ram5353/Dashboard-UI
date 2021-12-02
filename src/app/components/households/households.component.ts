@@ -20,11 +20,17 @@ export class HouseholdsComponent implements OnInit {
     'spend', 'units', 'storeRegion', 'weekNum', 'year'];
 
   households: Households[] = [];
+  filteredHouseHolds: Households[] = [];
+  search: number;
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  getData() {
     this.service.getHouseholdsData().subscribe ((response) => {
         this.households = response;
-        console.log(this.households, 'data check');
+        this.filteredHouseHolds = response;
       },
       (error) => {
         console.log('Error Occurred : ' + error);
@@ -32,4 +38,9 @@ export class HouseholdsComponent implements OnInit {
     );
   }
 
+  searchHouseHold(search: number) {
+    console.log('check');
+    this.filteredHouseHolds = this.households.filter(l => l.hshdNum === search);
+    console.log(this.filteredHouseHolds);
+  }
 }
