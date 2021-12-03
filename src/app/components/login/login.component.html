@@ -1,0 +1,100 @@
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<div *ngIf="loginCheck" class="container" style="padding-top: 177px">
+    <h1 style="text-align:center">Login</h1>
+    <hr>
+
+    <label for="username"><i class="fa fa-user icon"></i> User Name: <span class="req">* </span></label>
+    <input type="text" [(ngModel)]="loginUser.userName"
+           [ngModelOptions]="{standalone: true}"
+           class="input" placeholder="Username">
+
+    <label for="password"><i class="fa fa-key icon"></i> Password: <span class="req">* </span></label>
+    <input type="password" [(ngModel)]="loginUser.password"
+           [ngModelOptions]="{standalone: true}"
+           class="input" placeholder="Password">
+
+    <hr>
+
+    <button type="submit" (click)="onLogIn()" class="register_btn" >Sign in</button>
+    <p style="text-align:center" *ngIf="check">Wrong Credentials</p>
+</div>
+<div *ngIf="loginCheck" class="container sign-in">
+    <p>Don't have an account?<a routerLink="/register"> Register</a>.</p>
+</div>
+
+<!--<div *ngIf="loginSuccess">-->
+<!--    <h1>First Name : {{loggedUser.firstName}}</h1>-->
+<!--    <h1>Last Name</h1>: <h3>{{loggedUser.lastName}}</h3>-->
+<!--    <h1>Email</h1>: <h3>{{loggedUser.email}}</h3>-->
+<!--    <h1>User Name</h1>: <h3>{{loggedUser.userName}}</h3>-->
+<!--</div>-->
+
+
+
+
+<div *ngIf="loginSuccess">
+<!DOCTYPE html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<h2 style="padding-left: 300px">USER INFORMATION</h2>
+    <button style="float: right; padding-right: 40px !important;" (click)="returnToRegister()">LOGOUT</button>
+<div class="container">
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Information</th>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>{{loggedUser.firstName}}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{loggedUser.lastName}}</td>
+    </tr>
+    <tr>
+        <td>User Name</td>
+        <td>{{loggedUser.userName}}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{loggedUser.email}}</td>
+    </tr>
+</table>
+</div>
+
+        <div *ngIf="loginSuccess" style="margin: 100px; margin-left: 300px">
+            <div style="color: black; margin-bottom: 20px">
+                <h1>{{title}}</h1>
+                <h3>{{description}}</h3>
+            </div>
+
+<!--            <app-form-upload></app-form-upload>-->
+
+            <br/>
+            <br/>
+
+<!--            <app-list-upload></app-list-upload>-->
+        </div>
+</div>
+

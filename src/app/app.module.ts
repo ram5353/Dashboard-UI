@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
 import { GraphComponent } from './components/graph/graph.component';
 import {HouseholdFilterPipe} from './pipes/household-filter.pipe';
+import {LoginComponent} from './components/login/login.component';
+import {RegistrationComponent} from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import {HouseholdFilterPipe} from './pipes/household-filter.pipe';
     HouseholdsComponent,
     NavbarComponent,
     GraphComponent,
+    LoginComponent,
+    RegistrationComponent,
     HouseholdFilterPipe
   ],
   imports: [
